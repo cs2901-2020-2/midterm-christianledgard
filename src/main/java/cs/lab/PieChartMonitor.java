@@ -9,7 +9,6 @@ import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
 import org.jfree.util.Rotation;
 
-import java.util.HashMap;
 import java.util.Map;
 
 
@@ -27,9 +26,9 @@ public class PieChartMonitor extends JFrame {
     }
 
 
-    private  PieDataset createDataset(Map datosDePrueba) {
+    private  PieDataset createDataset(Map<String, Double> datosDePrueba) {
         DefaultPieDataset result = new DefaultPieDataset();
-        datosDePrueba.forEach((k,v) -> result.setValue(k.toString(), (Double) v));
+        datosDePrueba.forEach(result::setValue);
         return result;
     }
 

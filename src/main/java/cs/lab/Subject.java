@@ -8,13 +8,13 @@ import java.util.HashMap;
 public class Subject {
 
     static final Logger logger = Logger.getLogger(Subject.class.getName());    
-    private Map<String, Float> datos = new HashMap<>();
+    private Map<String, Double> datos = new HashMap<>();
 
-    public void setDatos(Map<String, Float> datos) {
+    public void setDatos(Map<String, Double> datos) {
         this.datos = datos;
     }
 
-    public Map<String, Float> getDatos() {
+    public Map<String, Double> getDatos() {
         return this.datos;  
     }
 
